@@ -12,7 +12,7 @@ public class LoginSteps extends BaseClass{
 @Given("User is on the login page")
 public void user_is_on_the_login_page() {
     loginpage = new LoginPage(driver);
-loginpage.openLoginPage("https://www.saucedemo.com/");
+loginpage.openLoginPage("https://automationexercise.com/login");
 }
 @When("User enters username {string}")
 public void user_enters_username(String username) {

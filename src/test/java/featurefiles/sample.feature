@@ -2,8 +2,8 @@ Feature: Login functionality
 
   Scenario: Successful login
     Given User is on the login page
-    When User enters username "standard_user"
-    And User enters password "secret_sauce"
+    When User enters username "testuser1@1991.com"
+    And User enters password "testuser123"
     And User clicks the login button
     Then Login should be successful
 
@@ -16,6 +16,6 @@ Then Login should be successful
 
 Examples:
     |username|password| 
-    |standard_user|secret_sauce|
-    |standard_user|secret_sauce|
+    |testuser1@1991.com|testuser123|
+    |testuser2@1992.com|testuser1234|
     

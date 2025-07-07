@@ -14,15 +14,15 @@ public void openLoginPage(String url) {
 }
 
 public void enterUsername(String username){
-    driver.findElement(By.id("user-name")).sendKeys(username);
+    driver.findElement(By.name("email")).sendKeys(username);
 }
 
 public void enterPassword(String password){
-    driver.findElement(By.id("password")).sendKeys(password);
+    driver.findElement(By.name("password")).sendKeys(password);
 }
 
 public void loginClick(){
-    driver.findElement(By.xpath("//input[@class='submit-button btn_action']")).click();
+    driver.findElement(By.xpath("//button[text()='Login']")).click();
 }
 
 }
