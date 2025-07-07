@@ -41,7 +41,6 @@
 </dependencies>
 <build>
   <plugins>
-    <!-- Add this plugin for Donut report generation -->
     <plugin>
       <groupId>net.masterthought</groupId>
       <artifactId>maven-cucumber-reporting</artifactId>
@@ -49,7 +48,7 @@
       <executions>
         <execution>
           <id>generate-cucumber-reports</id>
-          <phase>verify</phase> <!-- runs after tests -->
+          <phase>verify</phase> 
           <goals>
             <goal>generate</goal>
           </goals>
@@ -61,6 +60,25 @@
         </execution>
       </executions>
     </plugin>
+    <plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.11</version> <!-- Or latest -->
+    <executions>
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+        <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
   </plugins>
 </build>
 </project>
