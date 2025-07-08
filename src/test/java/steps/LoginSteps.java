@@ -30,5 +30,12 @@ public void user_clicks_the_login_button() {
 public void login_should_be_successful() {
     System.out.println("Successfully loggedin");
 }
-
+@Then("User should be Logged in as {string}")
+public void user_should_be_logged_in_as(String expectedUserName) {
+    loginpage.verifyLoggedInUser(expectedUserName);  
+}
+@Then("Click Logout button")
+public void click_logout_button() {
+    loginpage.logOut();
+}
 }

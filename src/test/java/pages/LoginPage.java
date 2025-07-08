@@ -1,7 +1,10 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 
 public class LoginPage {
 WebDriver driver;
@@ -25,4 +28,14 @@ public void loginClick(){
     driver.findElement(By.xpath("//button[text()='Login']")).click();
 }
 
+public void verifyLoggedInUser(String expectedUsername){
+    WebElement userNameElement = driver.findElement(By.xpath("//b[text()='testuser1']"));
+    String actualUserName = userNameElement.getText();
+    Assert.assertEquals(expectedUsername, actualUserName);
 }
+public void logOut(){
+    driver.findElement(By.xpath("//a[@href='/logout']")).click();
+}
+}
+
+
