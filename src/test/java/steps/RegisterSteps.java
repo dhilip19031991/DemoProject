@@ -19,7 +19,7 @@ public void user_is_on_the_home_page() {
 }
 @When("clicks on the Click on Signup \\/ Login button")
 public void clicks_on_the_click_on_signup_login_button() {
-    register.signUpLoginClick();;
+    register.signUpLoginClick();
    }
 @Then("Verify New User Signup is visible")
 public void verify_new_user_signup_is_visible() {
